@@ -58,14 +58,18 @@ export default function VideoCall() {
     function joinMeeting() {
         if (!roomUrl) return alert("Vui lòng nhập URL phòng!");
         if (!user) return alert("Vui lòng đăng nhập để tham gia cuộc gọi!");
-
+    
         if (!callFrame.current) {
             callFrame.current = DailyIframe.createFrame(videoContainerRef.current, {
                 iframeStyle: { width: "100%", height: "500px", border: "none" },
             });
         }
-
-        callFrame.current.join({ url: roomUrl });
+    
+        callFrame.current.join({
+            url: roomUrl,
+            userName: user.name // 🔹 Truyền tên user từ Google vào Daily.co
+        });
+    
         callFrame.current.on("joined-meeting", () => setJoined(true));
         callFrame.current.on("left-meeting", () => {
             setJoined(false);
@@ -73,6 +77,7 @@ export default function VideoCall() {
             callFrame.current = null;
         });
     }
+    
 
     function copyRoomUrl() {
         navigator.clipboard.writeText(roomUrl)
