@@ -1,0 +1,100 @@
+/* App.css */
+
+/* Căn chỉnh cho toàn bộ ứng dụng */
+.App {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 30px;
+  color: #333;
+  font-size: 18px; /* Tăng kích thước font chữ toàn bộ */
+}
+
+/* Tiêu đề */
+h1 {
+  font-size: 48px; /* Tăng kích thước tiêu đề */
+  font-weight: bold;
+  margin-bottom: 50px;
+  color: #007bff;
+  text-align: center;
+}
+
+/* Phần VideoCall */
+.VideoCall {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px; /* Tăng khoảng cách giữa các phần tử */
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Thêm border và hiệu ứng cho các phần tử nhập */
+input[type="text"] {
+  padding: 15px;
+  font-size: 18px; /* Tăng kích thước chữ trong input */
+  width: 100%;
+  max-width: 500px; /* Tăng chiều rộng tối đa của input */
+  margin: 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Nút điều khiển */
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 15px 30px; /* Tăng kích thước nút */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px; /* Tăng kích thước chữ trên nút */
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Video container */
+.video-container {
+  width: 100%;
+  height: 600px; /* Tăng chiều cao của video */
+
+  border-radius: 10px;
+  margin-top: 30px; /* Tăng khoảng cách từ video */
+}
+
+/* Điều chỉnh cho các nút đặc biệt */
+.create-room-btn {
+  background-color: #28a745;
+}
+
+.create-room-btn:hover {
+  background-color: #218838;
+}
+
+.join-room-btn {
+  background-color: #17a2b8;
+}
+
+.join-room-btn:hover {
+  background-color: #117a8b;
+}
+
+.leave-room-btn {
+  background-color: #dc3545;
+}
+
+.leave-room-btn:hover {
+  background-color: #c82333;
+}
